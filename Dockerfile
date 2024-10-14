@@ -1,6 +1,6 @@
 # https://github.com/cirruslabs/docker-images-android/pkgs/container/android-sdk
 # https://github.com/cirruslabs/docker-images-android/blob/master/sdk/34/Dockerfile
-ARG android_sdk_ver=34
+ARG android_sdk_ver=34-ndk
 FROM ghcr.io/cirruslabs/android-sdk:${android_sdk_ver}
 
 ARG flutter_ver=3.24.3
