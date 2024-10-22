@@ -34,5 +34,10 @@ sudo chown -R $USER $TARGET_FLUTTER_PATH
 sudo chmod -R 755 $TARGET_FLUTTER_PATH
 source ./setup_android_sdk.sh
 source ./setup_flutter.sh
+
+# add to .bashrc if not present
+grep -qxF 'if [ -f ~/.bash_profile ]; then source ~/.bash_profile; fi' ~/.bashrc || echo 'if [ -f ~/.bash_profile ]; then source ~/.bash_profile; fi' >> ~/.bashrc
+
+
 flutter doctor
 echo "SUCCESS - android sdk/ndk flutter ready"
