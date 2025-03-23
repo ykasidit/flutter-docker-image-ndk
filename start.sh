@@ -38,6 +38,7 @@ source ./setup_flutter.sh
 # add to .bashrc if not present
 grep -qxF 'if [ -f ~/.bash_profile ]; then source ~/.bash_profile; fi' ~/.bashrc || echo 'if [ -f ~/.bash_profile ]; then source ~/.bash_profile; fi' >> ~/.bashrc
 
+flutter config --android-sdk "$TARGET_ANDROID_SDK_PATH"
 flutter doctor
 
 echo "SUCCESS - android sdk/ndk flutter ready - pls close this terminal and open a new one and try below command to confirm:"
